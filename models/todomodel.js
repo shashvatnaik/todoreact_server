@@ -7,11 +7,14 @@ let todoSchema = new mongoose.Schema({
    },
     status:{
        type:String,
-        required:true,
         default:false
+    },
+    user:{
+       type:String,
+        required:true
     }
 });
 
-let todoModel = mongoose.model(`user`,todoSchema);
+let todoModel = mongoose.model(`todoTasks`,todoSchema);
 
 module.exports = {todoModel};
